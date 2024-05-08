@@ -48,7 +48,7 @@ class ConnectionLiveData(context: Context):LiveData<Boolean>() {
                     val hasInternet = InternetConnectionHave.execute(network.socketFactory)
                     if (hasInternet) {
                         withContext(Dispatchers.Main) {
-                            Log.d(TAG_MAIN, "onAvailable: adding network. ${network}")
+                            Log.d(TAG_MAIN, "Network Available: adding network. ${network}")
                             validNetworks.add(network)
                             checkValidNetworks()
                         }
