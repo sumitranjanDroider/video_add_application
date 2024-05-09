@@ -12,7 +12,7 @@ object InternetConnectionHave {
         return try{
             Log.d(TAG_MAIN, "PINGING google.")
             val socket = socketFactory.createSocket() ?: throw IOException("Socket is null.")
-            socket.connect(InetSocketAddress("https://google.com",53), 1500)
+            socket.connect(InetSocketAddress("8.8.8.8",53), 1500)
             socket.close()
             Log.d(TAG_MAIN, "PING success.")
             true

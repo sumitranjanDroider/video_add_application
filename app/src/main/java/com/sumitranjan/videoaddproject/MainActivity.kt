@@ -84,6 +84,7 @@ class MainActivity : AppCompatActivity() {
 
             }
             viewModel.mediaSourceFileList.observe(this@MainActivity){
+                loadingBar.visibility=View.GONE
                 player.setMediaItems(it)
             }
             viewModel.internetAvailable.observe(this@MainActivity){
